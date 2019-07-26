@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import styled from 'styled-components';
-import { EventEmitter } from 'events';
+
 
 const StyledForm = styled.form`
 input {
@@ -69,8 +69,7 @@ class Login extends Component {
                     type="password"
                 />
 
-                <div
-                    value={this.state.message}></div>
+                <div>Message: {this.state.message}</div>
                 <button type="submit">Login</button>
 
 
