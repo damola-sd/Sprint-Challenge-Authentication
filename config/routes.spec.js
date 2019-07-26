@@ -20,7 +20,7 @@ describe('routes', () => {
         return request(routes)
           .post('/api/register', (req, res) => {
               let user = { username: "Gareth", password: "Bale"};
-              User.add(user)
+              User.findBy(user.username)
           })
           .then(res => {
             expect(res.body).toBeInstanceOf(Array);
